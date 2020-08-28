@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- viewport为设备网页的区域，device-widtd为定义输出设备的可见宽度，initial-scale为页面可显示区域首次缩放级别，为1则无任何缩放。shrink-to-fit为自适应宽度，主要用于ios9。 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>简历模板</title>
+	<link rel="stylesheet" href="bootstrap-4.2.1/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+
+	<style type="text/css">
+		html{
+			min-width: 400px;
+
+		}
+		.left{
+			background: #4BCFE9;
+			top: 0px;
+		}
+		.right{
+			margin-bottom: 120px;
+		}
+		@media(min-width: 768px){
+			html{
+				font-size: 14px;
+			}
+		}
+		@media(min-width: 768px){
+			html{
+				font-size: 15px;
+			}
+			.left{
+				position: fixed;
+				bottom: 0;
+				left: 0;
+
+			}
+			.right{
+				margin-left: 25%;
+			}
+		}
+	</style>
+</head>
+<body class="container">
+	<div class="row">
+		<div class="col-sm-12 col-md-3 left">
+			<div class="row justify-content-between">
+				<div class="col-6 col-sm-5 col-md-12 p-4">
+					<img src="images/f.jpg" alt="userPhoto" class="img-fluid p-2 border">
+					<h3 class="text-white text-center">白璐</h3>
+					<h5>求职意向:网站开发</h5>
+				</div>
+
+				<div class="col-6 col-sm-5 col-md-12 p-5 p-md-4">
+					<h4>出生年月</h4>
+					<p>1995年10月10日</p>
+					<h4>联系电话</h4>
+					<p>1347845257</p>
+					<h4>电子邮箱</h4>
+					<p>906398176@qq.com</p>
+					<h4>联系地址</h4>
+					<p>北京市朝阳区</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-12 col-md-9 right p-0">
+			<div class="my-4">
+				
+				<ul class="clearfix">
+					<li class="float-sm-left">
+						<i class="fa fa-user-circle-o fa-2x"></i>
+						<a href="index.html"></a>
+					</li>
+
+				</ul>
+			</div>
+
+
+
+		</div>
+	</div>
+
+<!-- JavaScript脚本文件 -->
+	<script src="jquery-3.3.1.slim.js"></script>
+	<script src="popper-core-1.14.7/dist/umd/popper.js"></script><!-- 是dist/umd下的，不是dist/下的 -->
+	<script src="bootstrap-4.2.1/dist/js/bootstrap.js"></script>
+
+
+</body>
+</html>

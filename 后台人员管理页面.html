@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- viewport为设备网页的区域，device-widtd为定义输出设备的可见宽度，initial-scale为页面可显示区域首次缩放级别，为1则无任何缩放。shrink-to-fit为自适应宽度，主要用于ios9。 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>后台人员管理页面</title>
+	<link rel="stylesheet" href="bootstrap-4.2.1/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+
+	
+</head>
+<body class="container">
+	<div class="clearfix my-4">
+		<div class="d-flex float-left float-md-left">
+		   <div class="dropdown btn-group">
+		        <button class="btn btn-outline-success" type="button">选择条件</button>
+		        <button class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" data-offset="-90,0" type="button">
+		        	
+		        </button>
+
+		        <div class="dropdown-menu">
+		     	<a class="dropdown-item" href="#">角色名称</a>
+		     	<a class="dropdown-item" href="#">角色描述</a>
+		        </div>
+	       </div>
+
+	       <div class="ml-3">
+	       	<form class="form-inline">
+	       		<div class="form-group">
+	       			<input type="search" class="form-control">
+	       		</div>
+	       		<button type="submit" class="btn btn-success">查询</button>
+	       		
+	       	</form>
+	       </div>
+
+		
+	    </div>
+
+		
+
+		<div class="ml-auto btn-group float-md-right">
+			<button type="button" class="btn btn-primary"><i class="fa fa-plus mr-1"></i>新增</button>
+			<button type="button" class="btn btn-warning"><i class="fa fa-times mr-1"></i>删除</button>
+			<button type="button" class="btn btn-info"><i class="fa fa-pencil mr-1"></i>编辑</button>
+			<button type="button" class="btn btn-success"><i class="fa fa-star mr-1"></i>角色授权</button>
+		</div>
+
+	</div>
+	
+	<table class="table table-bordered"><!-- table-striped为条纹状表格,table-borderless为无边框表格 -->
+		<!-- 表头容器 -->
+		<thead class="table-success">
+			<th><input type="checkbox"></th>
+			<th>角色编号</th>
+			<th>角色名称</th>
+			<th>创建时间</th>
+			<th>角色描述</th>
+		
+		</thead>
+		<!-- 主体容器 -->
+		<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+			    <td>10001</td>
+			    <td>系统管理员</td>
+			    <td>2020-10-20</td>
+			    <td>周欣</td>
+			   
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+			    <td>10002</td>
+			    <td>超级会员</td>
+			    <td>2020-10-10</td>
+			    <td>刘语熙</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+			    <td>10003</td>
+			    <td>超级会员</td>
+			    <td>2020-10-20</td>
+			    <td>方兴旺</td>
+			  
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+			    <td>10004</td>
+			    <td>普通会与</td>
+			    <td>2020-10-20</td>
+			    <td>林欢欢</td>
+			    
+			</tr>
+		</tbody>
+
+	</table>
+	
+
+
+
+
+<!-- JavaScript脚本文件 -->
+	<script src="jquery-3.3.1.slim.js"></script>
+	<script src="popper-core-1.14.7/dist/umd/popper.js"></script><!-- 是dist/umd下的，不是dist/下的 -->
+	<script src="bootstrap-4.2.1/dist/js/bootstrap.js"></script>
+
+
+</body>
+</html>

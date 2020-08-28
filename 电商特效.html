@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- viewport为设备网页的区域，device-width为定义输出设备的可见宽度，initial-scale为页面可显示区域首次缩放级别，为1则无任何缩放。shrink-to-fit为自适应宽度，主要用于ios9。 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
+	<title>电商特效</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.2.1/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+
+<style type="text/css">
+	 .product-grid{
+            text-align: center;                     /*定义水平居中*/
+            overflow: hidden;                      /*超出隐藏*/
+            position: relative;                     /*定位*/
+            transition: all 0.5s ease 0s;           /*定义过渡动画*/
+        }
+        .product-grid .product-image{
+            overflow: hidden;                       /*超出隐藏*/
+        }
+        .product-grid .product-image img{
+            width: 100%;                             /*定义宽度*/
+            height: auto;                            /*高度自动*/
+            transition: all 0.5s ease 0s;            /*定义过渡动画*/
+        }
+        .product-grid:hover .product-image img{
+            transform: scale(1.1);                   /*定义2D转换，放大1.1倍*/
+        }
+        .product-grid .product-content{
+            padding: 12px 12px 15px 12px;            /*定义内边距*/
+            transition: all 0.5s ease 0s;            /*定义过渡动画*/
+        }
+        .product-grid:hover .product-content{
+            opacity: 0;                              /*定义透明度为*/
+        }
+        .product-grid .title{
+            font-size: 20px;                        /*定义字体大小*/
+            font-weight: 600;                        /*定义字体加粗*/
+            margin: 0 0 10px;                         /*定义外边距*/
+        }
+        .product-grid .title a{
+            color: #000;                             /*定义字体颜色*/
+        }
+        .product-grid .title a:hover{
+            color: #2e86de;                          /*定义字体颜色*/
+        }
+        .product-grid .price {
+            font-size: 18px;                       /*定义字体大小*/
+            font-weight: 600;                     /*定义字体加粗*/
+            color:#2e86de;                         /*定义字体颜色*/
+        }
+        .product-grid .price span {
+            color: #999;                          /*定义字体颜色*/
+            font-size: 15px;                      /*定义字体大小*/
+            font-weight: 400;                     /*定义字体粗细*/
+            text-decoration: line-through;         /*定义穿过文本下的一条线*/
+            margin-left: 7px;                      /*定义左边外边距*/
+            display: inline-block;                 /*定义行内块级元素*/
+        }
+        .product-grid .social{
+            background-color: #fff;                 /*定义背景颜色*/
+            width: 100%;                            /*定义宽度*/
+            padding: 0;                             /*定义内边距*/
+            margin: 0;                              /*定义外边距*/
+            list-style: none;                       /*去掉项目符号*/
+            opacity: 0;                             /*定义透明度*/
+            position: absolute;                     /*绝对定位*/
+            bottom: -50%;                           /*距离底边的距离*/
+            transition: all 0.5s ease 0s;           /*定义过渡动画*/
+        }
+        .product-grid:hover .social{
+            opacity: 1;                              /*定义透明度*/
+            bottom: 20px;                            /*定义距离底边的距离*/
+        }
+        .product-grid .social li{
+            display: inline-block;                   /*定义行内块级元素*/
+        }
+        .product-grid .social li a{
+            color: #909090;                         /*定义字体颜色*/
+            font-size: 16px;                        /*定义字体大小*/
+            line-height: 45px;                     /*定义行高*/
+            text-align: center;                  /*定义水平居中*/
+            height: 45px;                         /*定义高度*/
+            width: 45px;                          /*定义宽度*/
+            margin: 0 7px;                        /*定义外边距*/
+            border: 1px solid #909090;            /*定义边框*/
+            border-radius: 50px;                     /*定义圆角*/
+            display: block;                       /*定义块级元素*/
+            position: relative;                    /*相对定位*/
+            transition: all 0.3s ease-in-out;            /*定义过渡动画*/
+        }
+        .product-grid .social li a:hover {
+            color: #fff;                                   /*定义字体颜色*/
+            background-color: #2e86de;                   /*定义背景颜色*/
+        }
+  
+</style>
+</head>
+<body class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-6">
+			<div class="product-grid">
+				<div class="product-image">
+				<a href="#">
+					<img class="pic-1" src="images/img-1.jpg">
+				</a>
+				</div>
+				<!-- 产品说明及价格 -->
+				<div class="product-content">
+					<h3 class="title"><a href="#">男士寸衫</a></h3>
+					<div class="price">￥23.00
+						<span>$36.00</span>
+
+					</div>
+				</div>
+				<!-- 功能按钮 -->
+				<ul class="social">
+					<li><a href=""><i class="fa fa-search"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-bag"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<div class="product-grid">
+				<div class="product-image">
+				<a href="#">
+					<img class="pic-1" src="images/img-2.jpg">
+				</a>
+				</div>
+				<!-- 产品说明及价格 -->
+				<div class="product-content">
+					<h3 class="title"><a href="#">女士短袖</a></h3>
+					<div class="price">￥26.00
+						<span>$36.00</span>
+
+					</div>
+				</div>
+				<!-- 功能按钮 -->
+				<ul class="social">
+					<li><a href=""><i class="fa fa-search"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-bag"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<div class="product-grid">
+				<div class="product-image">
+				<a href="#">
+					<img class="pic-1" src="images/img-3.jpg">
+				</a>
+				</div>
+				<!-- 产品说明及价格 -->
+				<div class="product-content">
+					<h3 class="title"><a href="#">女士上衣</a></h3>
+					<div class="price">￥26.00
+						<span>$33.00</span>
+
+					</div>
+				</div>
+				<!-- 功能按钮 -->
+				<ul class="social">
+					<li><a href=""><i class="fa fa-search"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-bag"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<div class="product-grid">
+				<div class="product-image">
+				<a href="#">
+					<img class="pic-1" src="images/img-4.jpg">
+				</a>
+				</div>
+				<!-- 产品说明及价格 -->
+				<div class="product-content">
+					<h3 class="title"><a href="#">男士短袖</a></h3>
+					<div class="price">￥29.00
+						<span>$14.00</span>
+
+					</div>
+				</div>
+				<!-- 功能按钮 -->
+				<ul class="social">
+					<li><a href=""><i class="fa fa-search"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-bag"></i></a></li>
+					<li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+<!-- JavaScript脚本文件 -->
+	<script src="jquery-3.3.1.slim.js"></script>
+	<script src="popper-core-1.14.7/dist/popper.js"></script>
+	<script src="bootstrap-4.2.1/dist/js/bootstrap.js"></script>
+
+
+</body>
+</html>
